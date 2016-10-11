@@ -16,3 +16,5 @@
 ## Autorzy:
   * Krzysztof Palka
   * Patryk Skibiński
+  * Kamil Trąbka
+  * Michał Kędzierski
