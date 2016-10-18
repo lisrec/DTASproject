@@ -21,8 +21,8 @@ app.use(express.static(path.join(__dirname, 'client')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use('/', index);
-
+app.use('/', index); 
+//to do: add api route
 
 app.listen(port, function(){
 	console.log(`Server started on ${port}`);
