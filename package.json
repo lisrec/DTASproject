@@ -1,0 +1,25 @@
+{
+  "name": "tas_project",
+  "version": "1.0.0",
+  "description": "Projekt na TAS.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisrec/DTASproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisrec/DTASproject/issues"
+  },
+  "homepage": "https://github.com/lisrec/DTASproject#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "mongojs": "^2.4.0"
+  }
+}
