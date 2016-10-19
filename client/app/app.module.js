@@ -10,14 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var ng_bootstrap_1 = require('@ng-bootstrap/ng-bootstrap');
+var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
+var booksGrid_component_1 = require('./components/booksGrid/booksGrid.component');
+var bookDetails_component_1 = require('./components/bookDetails/bookDetails.component');
+var router_config_1 = require('./router.config');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [platform_browser_1.BrowserModule, ng_bootstrap_1.NgbModule.forRoot(), router_1.RouterModule.forRoot(router_config_1.RouterConf)],
+            declarations: [app_component_1.AppComponent, booksGrid_component_1.BooksGridComponent, bookDetails_component_1.BookDetailsComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

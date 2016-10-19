@@ -1,13 +1,48 @@
-<div class="row">
-	<div class="col-sm-3">
-		Left-Col
-	</div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" (click)="isCollapsed = !isCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" [routerLink]="['/']">Biblioteka</a>
+            </div>
+            <div [ngbCollapse]="!isCollapsed" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="" [routerLink]="['/book',1]">Book test</a>
+                    </li>
+                    <li>
+                        <a href="" [routerLink]="['/']">Główna</a>
+                    </li>
+					<li ngbDropdown>
+						<a ngbDropdownToggle href="#">Toggle dropdown</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#" class="dropdown-item">Action - 1</a></li>
+							<li><a href="#" class="dropdown-item">Another Action</a></li>
+							<li><a href="#" class="dropdown-item">Something else is here</a></li>
+						</ul>
+					</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-	<div class="col-sm-6">
-		<h1> Bootsrap Initialized </h1>
-	</div>
+	<!-- ROUTER -->
+	<router-outlet></router-outlet>
 
-	<div class="col-sm-3">
-		Right-Col
-	</div>
-</div>
+    <div class="container">
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; UAM DTAS 2016</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
