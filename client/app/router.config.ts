@@ -3,5 +3,7 @@ import { BookDetailsComponent } from './components/bookDetails/bookDetails.compo
 
 export const RouterConf = [
       { path: '', component: BooksGridComponent },
+      { path: 'books', component: BooksGridComponent },
+      { path: 'books/cat/:category', component: BooksGridComponent },
       { path: 'book/:id', component: BookDetailsComponent }
     ]

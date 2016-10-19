@@ -27,6 +27,11 @@ app.use('/', index);
 app.use('/api', profile);
 app.use('/api', books);
 
+app.use(function(req, res) {
+    //res.status(404).end('error');
+    res.redirect('/');
+});
+
 app.listen(port, function(){
 	console.log(`Server started on ${port}`);
 });
