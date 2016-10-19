@@ -21,13 +21,20 @@ router.get('/books', function(req, res, next){
 router.get('/book/:id', function(req, res, next){
 	let id = req.params.id;
 
-	db.books.findOne({_id: mongojs.ObjectId(id)}, function(err, book){
-		if(err){
-			res.send(err);
-		} else {
-			res.json(book);
-		}
-	});
+	if(id.length != 12 && id.length != 24){
+		res.json({
+			"fail": "badArgs"
+		});
+	} else {
+		db.books.findOne({_id: mongojs.ObjectId(id)}, function(err, book){
+			if(err){
+				res.send(err);
+			} else {
+				res.json(book);
+			}
+		});
+	}
+	
 });
 
 

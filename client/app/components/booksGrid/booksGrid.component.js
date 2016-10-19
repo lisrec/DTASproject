@@ -9,17 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var books_service_1 = require('../../services/books.service');
 var BooksGridComponent = (function () {
-    function BooksGridComponent() {
-        console.log('test');
+    function BooksGridComponent(booksService) {
+        var _this = this;
+        this.booksService = booksService;
+        this.booksService.getBooks()
+            .subscribe(function (books) {
+            console.log(books);
+            _this.books = books;
+        });
     }
     BooksGridComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'booksGrid',
-            templateUrl: 'booksGrid.component.html'
+            templateUrl: 'booksGrid.component.html',
+            styleUrls: ['booksGrid.component.css'],
+            providers: [books_service_1.BooksService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [books_service_1.BooksService])
     ], BooksGridComponent);
     return BooksGridComponent;
 }());

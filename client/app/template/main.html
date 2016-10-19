@@ -12,17 +12,17 @@
             <div [ngbCollapse]="!isCollapsed" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="" [routerLink]="['/book',1]">Book test</a>
+                        <a [routerLink]="['/book',1]">Book test</a>
                     </li>
                     <li>
-                        <a href="" [routerLink]="['/']">Główna</a>
+                        <a [routerLink]="['/']">Główna</a>
                     </li>
 					<li ngbDropdown>
-						<a ngbDropdownToggle href="#">Toggle dropdown</a>
+						<a ngbDropdownToggle>Toggle dropdown</a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li><a href="#" class="dropdown-item">Action - 1</a></li>
-							<li><a href="#" class="dropdown-item">Another Action</a></li>
-							<li><a href="#" class="dropdown-item">Something else is here</a></li>
+							<li><a class="dropdown-item">Action - 1</a></li>
+							<li><a class="dropdown-item">Another Action</a></li>
+							<li><a class="dropdown-item">Something else is here</a></li>
 						</ul>
 					</li>
                 </ul>
@@ -31,7 +31,9 @@
     </nav>
 
 	<!-- ROUTER -->
-	<router-outlet></router-outlet>
+    <div class="main-container">
+	   <router-outlet></router-outlet>
+    </div>
 
     <div class="container">
 

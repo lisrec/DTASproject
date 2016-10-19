@@ -6,19 +6,15 @@ footer {
     margin: 50px 0;
 }
 
+a{
+	cursor: pointer;
+}
+
+.main-container{
+	min-height: 600px;
+}
 
 .navbar-brand{
     color: white !important;
 }
 
-.slide-image {
-    width: 100%;
-}
-
-.carousel-holder {
-    margin-bottom: 30px;
-}
-
-.carousel-control, .item {
-    border-radius: 4px;
-}

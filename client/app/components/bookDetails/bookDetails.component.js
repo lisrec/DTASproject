@@ -10,21 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var books_service_1 = require('../../services/books.service');
 var BookDetailsComponent = (function () {
-    function BookDetailsComponent(route) {
+    function BookDetailsComponent(route, booksService) {
+        var _this = this;
         this.route = route;
-        var sub = this.route.params._value.id;
-        console.log(sub);
+        this.booksService = booksService;
+        this.sub = this.route.params.subscribe(function (params) {
+            var id = params['id'];
+            _this.bookId = id;
+        });
+        this.booksService.getBook(this.bookId)
+            .subscribe(function (book) {
+            _this.book = book;
+        });
     }
-    BookDetailsComponent.prototype.ngOnInit = function () {
-    };
     BookDetailsComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'bookDetails',
-            templateUrl: 'bookDetails.component.html'
+            templateUrl: 'bookDetails.component.html',
+            styleUrls: ['bookDetails.component.css'],
+            providers: [books_service_1.BooksService]
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, books_service_1.BooksService])
     ], BookDetailsComponent);
     return BookDetailsComponent;
 }());
