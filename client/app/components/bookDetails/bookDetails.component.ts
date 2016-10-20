@@ -29,7 +29,6 @@ export class BookDetailsComponent{
         this.booksService.getBook(this.bookId)
         	.subscribe(book => {
         		this.book = book;
-        		console.log(this.book);
         	});
 	}
 }

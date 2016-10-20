@@ -1,19 +1,67 @@
-<div class="container">
+<div class="container anim-fadeIn-slow">
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title">
-				{{ book?.name }}
+				Książki >> Fantastyka
 			</h3>
 		</div>
-		<div class="panel-body">
+		<div class="panel-body anim-fadeIn-slow">
 		    <div class="row">
 		    	<div class="col-md-3">
 		    		<div class="book_detail_img">
-		    			<img src="" alt="img">
+		    			<img src="assets/images/books_uploads/{{book?.img_link}}" alt="img" class="img-thumbnail">
 		    		</div>
 		    	</div>
 		    	<div class="col-md-9">
-		    		Dane z servera:<br> <pre>{{ book | json }}</pre>
+					<div class="row">
+						<div class="col-sm-8 col-md-8 col-lg-8">
+							<div class="book_name">{{ book?.name }}</div>
+				    		<div class="book_author">Autor: <span>{{ book?.author }}</span></div>
+				    		<hr>
+				    		<div class="book_moreInfo">
+				    			<table>
+				    				<tr><td>Wydawnictwo: </td><td> {{ book?.publisher }} </td></tr>
+				    				<tr><td>Rok wydania: </td><td> {{ book?.year }} </td></tr>
+				    				<tr><td>Ilość stron: </td><td> {{ book?.pages }} </td></tr>
+				    			</table>
+				    		</div>
+						</div>
+						<div class="col-sm-4 col-md-4 col-lg-4">
+							[TODO: Dostępność]
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<ngb-tabset>
+								<ngb-tab title="Opis">
+									<template ngbTabContent>
+										<p [innerHTML]="book?.desc"></p>
+									</template>
+								</ngb-tab>
+								<ngb-tab title="Recenzje">
+									<template ngbTabContent>
+										[TODO: Recenzje]
+									</template>
+								</ngb-tab>
+							</ngb-tabset>
+						</div>
+					</div>
+		    	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				Dane z servera
+			</h3>
+		</div>
+		<div class="panel-body anim-fadeIn-slow">
+		    <div class="row">
+		    	<div class="coll-md-offset-1 col-md-10">
+		    		<pre>{{ book | json }}</pre>
 		    	</div>
 			</div>
 		</div>

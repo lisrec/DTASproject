@@ -14,7 +14,6 @@ require('rxjs/add/operator/map');
 var BooksService = (function () {
     function BooksService(http) {
         this.http = http;
-        console.log("service initialized");
     }
     BooksService.prototype.getBooks = function () {
         return this.http.get('/api/books')

@@ -1,0 +1,25 @@
+.book_name {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.book_author {
+	font-size: 12px;
+
+	span {
+		margin-left: 10px;
+		font-style: italic;
+	}
+}
+
+.book_moreInfo {
+	margin: 10px 0 30px 0;
+	font-size: 12px;
+
+	td {
+		padding-left: 15px; 
+	}
+
+	td:first-child { color: #6A6F70; }
+	td:last-child { font-style: italic; }
+}

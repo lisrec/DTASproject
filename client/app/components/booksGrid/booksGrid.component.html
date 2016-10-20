@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container anim-fadeIn">
     <div class="row">
 
         <div class="col-md-3">
@@ -16,9 +16,9 @@
             <div class="row">
 
                 <!-- TEMPLATE: -->
-                <div class="col-sm-4 col-lg-4 col-md-4 float-panel" *ngFor="let book of books">
+                <div class="col-sm-4 col-lg-4 col-md-4 float-panel anim-fadeIn-slow" *ngFor="let book of books">
                     <div class="thumbnail">
-                        <img src="http://placehold.it/320x150" alt="">
+                        <img src="assets/images/books_uploads/{{book?.img_link}}" alt="" class="thumb-book">
                         <div class="caption">
                             <h4 class="pull-right" style="color: green">+</h4>
                             <h4><a href="" [routerLink]="['/book',book._id]">{{book.name}}</a>

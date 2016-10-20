@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BooksService } from '../../services/books.service';
 
 import { Book } from '../../objects/Book';
@@ -10,15 +10,20 @@ import { Book } from '../../objects/Book';
 	styleUrls: [ 'booksGrid.component.css' ],
 	providers: [ BooksService ]
 })
-export class BooksGridComponent {
+export class BooksGridComponent implements OnInit {
+	books_geted: Book[];
 	books: Book[];
 
 	constructor(private booksService: BooksService) {
 
 		this.booksService.getBooks()
 			.subscribe(books => {
-				console.log(books);
 				this.books = books;
 			});
+
+	}
+
+	ngOnInit(){
+
 	}
 }

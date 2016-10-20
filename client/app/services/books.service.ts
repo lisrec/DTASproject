@@ -5,9 +5,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BooksService {
-	constructor(private http: Http) {
-		console.log("service initialized");
-	}
+	constructor(private http: Http) { }
 
 	getBooks(){
 		return this.http.get('/api/books')

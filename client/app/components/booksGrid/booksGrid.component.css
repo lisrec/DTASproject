@@ -2,4 +2,11 @@
   height: 370px;
   max-height: 370px; }
 
+.thumb-book {
+  display: block;
+  height: 150px;
+  width: 250px;
+  object-fit: cover;
+  object-position: 0px 0px; }
+
 /*# sourceMappingURL=booksGrid.component.css.map */

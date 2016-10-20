@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,YAAa;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,KAAK",
+"mappings": "AAAA,YAAa;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,KAAK;;AAGlB,WAAY;EACX,OAAO,EAAE,KAAK;EACX,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,KAAK;EACjB,eAAe,EAAE,OAAO",
 "sources": ["booksGrid.component.scss"],
 "names": [],
 "file": "booksGrid.component.css"

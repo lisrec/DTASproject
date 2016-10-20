@@ -16,10 +16,11 @@ var BooksGridComponent = (function () {
         this.booksService = booksService;
         this.booksService.getBooks()
             .subscribe(function (books) {
-            console.log(books);
             _this.books = books;
         });
     }
+    BooksGridComponent.prototype.ngOnInit = function () {
+    };
     BooksGridComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

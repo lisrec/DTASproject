@@ -23,7 +23,6 @@ var BookDetailsComponent = (function () {
         this.booksService.getBook(this.bookId)
             .subscribe(function (book) {
             _this.book = book;
-            console.log(_this.book);
         });
     }
     BookDetailsComponent = __decorate([
