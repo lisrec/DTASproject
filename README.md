@@ -3,6 +3,8 @@
 ## Temat:
 **Projekt biblioteka - wypożyczalnia książek.**
 
+
+
 ## Technologie:
   * Angular2
   * NodeJS
@@ -12,8 +14,8 @@
   * JavaScript
   * HTML5
   * CSS3
-  
----
+
+
   
 ## Plan projektu:
 ### Podstrony:
@@ -36,7 +38,8 @@
  * getNotification
  * sendNotification
  
----
+ 
+ 
 
 ## Pomoc:
 ### Przygotowanie:
@@ -60,7 +63,8 @@
  * `git commit -m "TRESC WIADOMOSCI CO ZOSTALO ZROBIONE (NAJLEPIEJ PO ANG)"`
  * `git push`
 
----
+
+
 
 ## Autorzy:
   * Krzysztof Palka
