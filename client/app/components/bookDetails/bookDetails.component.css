@@ -9,7 +9,7 @@
     font-style: italic; }
 
 .book_moreInfo {
-  margin: 10px 0 30px 0;
+  margin: 10px 0 50px 0;
   font-size: 12px; }
   .book_moreInfo td {
     padding-left: 15px; }
@@ -17,5 +17,8 @@
     color: #6A6F70; }
   .book_moreInfo td:last-child {
     font-style: italic; }
+
+.tabDetail-cont {
+  padding: 10px; }
 
 /*# sourceMappingURL=bookDetails.component.css.map */

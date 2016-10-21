@@ -9,14 +9,30 @@ import { TruncatePipe }   	from './app.pipe';
 import { AppComponent }   		from './app.component';
 import { BooksGridComponent } 	from './components/booksGrid/booksGrid.component';
 import { BookDetailsComponent } from './components/bookDetails/bookDetails.component';
+import { BookReviewsComponent } from './components/bookReviews/bookReviews.component';
 import { RouterConf } 			from './router.config';
 
 
 
 @NgModule({
-  imports:      [ BrowserModule, HttpModule, NgbModule.forRoot(), RouterModule.forRoot(RouterConf) ],
-  declarations: [ AppComponent, BooksGridComponent, BookDetailsComponent, TruncatePipe ],
-  bootstrap:    [ AppComponent ]
+  imports: [ 
+				BrowserModule, 
+				HttpModule, 
+				NgbModule.forRoot(), 
+				RouterModule.forRoot(RouterConf) 
+			],
+			
+  declarations: [
+  					AppComponent, 
+  					BooksGridComponent, 
+  					BookDetailsComponent, 
+  					BookReviewsComponent, 
+  					TruncatePipe 
+  				],
+
+  bootstrap: [ 
+  				AppComponent 
+  			 ]
 })
 
 export class AppModule { }

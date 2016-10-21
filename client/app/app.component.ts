@@ -9,6 +9,3 @@ import { BooksGridComponent } from './components/booksGrid/booksGrid.component';
 export class AppComponent{
 	constructor() {}
 }
-
-
-

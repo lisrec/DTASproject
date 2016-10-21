@@ -36,12 +36,16 @@
 							<ngb-tabset>
 								<ngb-tab title="Opis">
 									<template ngbTabContent>
-										<p [innerHTML]="book?.desc"></p>
+										<div class="tabDetail-cont">
+											<p [innerHTML]="book?.desc"></p>
+										</div>
 									</template>
 								</ngb-tab>
 								<ngb-tab title="Recenzje">
 									<template ngbTabContent>
-										[TODO: Recenzje]
+										<div class="tabDetail-cont">
+											<bookReview></bookReview>
+										</div>
 									</template>
 								</ngb-tab>
 							</ngb-tabset>

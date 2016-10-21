@@ -17,15 +17,29 @@ var app_pipe_1 = require('./app.pipe');
 var app_component_1 = require('./app.component');
 var booksGrid_component_1 = require('./components/booksGrid/booksGrid.component');
 var bookDetails_component_1 = require('./components/bookDetails/bookDetails.component');
+var bookReviews_component_1 = require('./components/bookReviews/bookReviews.component');
 var router_config_1 = require('./router.config');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, ng_bootstrap_1.NgbModule.forRoot(), router_1.RouterModule.forRoot(router_config_1.RouterConf)],
-            declarations: [app_component_1.AppComponent, booksGrid_component_1.BooksGridComponent, bookDetails_component_1.BookDetailsComponent, app_pipe_1.TruncatePipe],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [
+                platform_browser_1.BrowserModule,
+                http_1.HttpModule,
+                ng_bootstrap_1.NgbModule.forRoot(),
+                router_1.RouterModule.forRoot(router_config_1.RouterConf)
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                booksGrid_component_1.BooksGridComponent,
+                bookDetails_component_1.BookDetailsComponent,
+                bookReviews_component_1.BookReviewsComponent,
+                app_pipe_1.TruncatePipe
+            ],
+            bootstrap: [
+                app_component_1.AppComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
