@@ -5,6 +5,7 @@ var bodyParser = require("body-parser");
 var index = require("./routes/index");
 var books = require("./routes/books");
 var profile = require("./routes/profile");
+var reviews = require("./routes/reviews");
 
 var port = 8080;
 
@@ -26,6 +27,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', index); 
 app.use('/api', profile);
 app.use('/api', books);
+app.use('/api', reviews);
 
 app.use(function(req, res) {
     //res.status(404).end('error');

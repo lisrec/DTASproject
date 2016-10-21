@@ -5,7 +5,26 @@
 		</div>
 
 		<div>
-			RECENZJE
+			<div class="row" *ngIf="reviews?.length == 0">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					<p class="bookNoReviewsInf"> Nie ma jeszcze recenzji dla tej książki. </p>
+				</div>
+			</div>
+			<div class="row" *ngFor="let review of reviews">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					<div class="review_box">
+						<div class="heading">
+							<span class="rev_author">{{review.author}}</span>
+							•
+							<span class="rev_date">{{review.date | date}}</span>
+						</div>
+						<div class="body">
+							<p>{{review.content}}</p>
+							<div>{{review.reat}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

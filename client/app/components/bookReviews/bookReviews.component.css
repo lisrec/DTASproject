@@ -1,5 +1,24 @@
 .addRewview-button {
   position: absolute;
-  right: 10px; }
+  right: 10px;
+  top: 10px; }
+
+.bookNoReviewsInf {
+  font-size: 15px;
+  color: #AA3034;
+  width: 100%;
+  padding: 25px 0 0 25px;
+  margin: auto; }
+
+.review_box {
+  padding: 5px; }
+  .review_box .heading .rev_author {
+    color: blue;
+    font-size: 12px; }
+  .review_box .heading .rev_date {
+    font-style: italic;
+    font-size: 11px; }
+  .review_box .body {
+    padding: 10px; }
 
 /*# sourceMappingURL=bookReviews.component.css.map */
