@@ -1,0 +1,22 @@
+{
+  "name": "tas_project",
+  "description": "Projekt na TAS.",
+  "main": "server.js",
+  "authors": [
+    "lisrec <lisrec94@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/lisrec/DTASproject",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.5"
+  }
+}

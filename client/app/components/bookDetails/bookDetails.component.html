@@ -1,10 +1,6 @@
 <div class="container anim-fadeIn-slow">
 	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h3 class="panel-title">
-				Książki >> Fantastyka
-			</h3>
-		</div>
+		
 		<div class="panel-body anim-fadeIn-slow">
 		    <div class="row">
 		    	<div class="col-md-3">
@@ -36,14 +32,14 @@
 							<ngb-tabset>
 								<ngb-tab title="Opis">
 									<template ngbTabContent>
-										<div class="tabDetail-cont">
+										<div class="tabDetail-cont anim-fadeIn-slow">
 											<p [innerHTML]="book?.desc"></p>
 										</div>
 									</template>
 								</ngb-tab>
 								<ngb-tab title="Recenzje">
 									<template ngbTabContent>
-										<div class="tabDetail-cont">
+										<div class="tabDetail-cont anim-fadeIn-slow">
 											<bookReview [bookId]='bookId'></bookReview>
 										</div>
 									</template>
@@ -59,13 +55,13 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title">
-				Dane z servera
+				Zobacz także
 			</h3>
 		</div>
 		<div class="panel-body anim-fadeIn-slow">
 		    <div class="row">
-		    	<div class="coll-md-offset-1 col-md-10">
-		    		<pre>{{ book | json }}</pre>
+		    	<div class="col-md-offset-1 col-md-10">
+		    		[TODO: Ksiazki z gatunku]
 		    	</div>
 			</div>
 		</div>
