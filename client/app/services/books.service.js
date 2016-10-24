@@ -19,6 +19,10 @@ var BooksService = (function () {
         return this.http.get('/api/books')
             .map(function (res) { return res.json(); });
     };
+    BooksService.prototype.getBooksRevsCount = function (id) {
+        return this.http.get('/api/bookRevs/' + id)
+            .map(function (res) { return res.json(); });
+    };
     BooksService.prototype.getBook = function (id) {
         return this.http.get('/api/book/' + id)
             .map(function (res) { return res.json(); });

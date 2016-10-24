@@ -8,5 +8,6 @@ export class Book {
 	year: number;
 	pages: number;
 	desc: string;
-	
+	revs: number;
+
 }

@@ -18,7 +18,15 @@ export class BooksGridComponent implements OnInit {
 
 		this.booksService.getBooks()
 			.subscribe(books => {
-				this.books = books;
+				let countBooks = books;
+				countBooks.forEach(book => {
+					this.booksService.getBooksRevsCount(book._id)
+						.subscribe(ret => {
+							book.revs = ret.count;
+						});
+				});
+
+				this.books = countBooks;
 			});
 
 	}

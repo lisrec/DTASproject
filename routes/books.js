@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://book_app:skibaXD@ds061076.mlab.com:61076/tas_project', ['books']);
+var db = mongojs('mongodb://book_app:skibaXD@ds061076.mlab.com:61076/tas_project', ['books', 'reviews']);
 
 
 //Get all books
@@ -11,7 +11,24 @@ router.get('/books', function(req, res, next){
 		if(err){
 			res.send(err);
 		} else {
-			res.json(books);
+			books.forEach(book => {
+				book.revs = 0;
+			});
+			res.send(books);
+		}
+	});
+});
+
+router.get('/bookRevs/:id', function(req, res, next){
+	let id = req.params.id;
+
+	db.reviews.find({"bookId": id}, function(err, reviews){
+		if(err){
+			res.send(err);
+		} else {
+			let count = 0;
+			count = reviews.length;
+			res.send({count: count});
 		}
 	});
 });

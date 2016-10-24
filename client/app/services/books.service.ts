@@ -12,6 +12,11 @@ export class BooksService {
 			.map(res => res.json());
 	}
 
+	getBooksRevsCount(id){
+		return this.http.get('/api/bookRevs/'+id)
+			.map(res => res.json());
+	}
+
 	getBook(id){
 		return this.http.get('/api/book/'+id)
 			.map(res => res.json());

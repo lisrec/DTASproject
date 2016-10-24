@@ -16,7 +16,14 @@ var BooksGridComponent = (function () {
         this.booksService = booksService;
         this.booksService.getBooks()
             .subscribe(function (books) {
-            _this.books = books;
+            var countBooks = books;
+            countBooks.forEach(function (book) {
+                _this.booksService.getBooksRevsCount(book._id)
+                    .subscribe(function (ret) {
+                    book.revs = ret.count;
+                });
+            });
+            _this.books = countBooks;
         });
     }
     BooksGridComponent.prototype.ngOnInit = function () {
