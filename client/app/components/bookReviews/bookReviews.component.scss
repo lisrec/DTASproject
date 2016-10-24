@@ -32,3 +32,18 @@
 		padding: 10px;
 	}
 }
+
+.modal-fader{
+	position: fixed;
+	z-index: 101;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(50, 50, 50, 0.7);
+	-webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}

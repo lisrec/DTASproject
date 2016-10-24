@@ -10,10 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var reviews_service_1 = require('../../services/reviews.service');
+var ng_bootstrap_1 = require('@ng-bootstrap/ng-bootstrap');
 var BookReviewsComponent = (function () {
-    function BookReviewsComponent(reviewsService) {
+    function BookReviewsComponent(reviewsService, modalService) {
         this.reviewsService = reviewsService;
+        this.modalService = modalService;
         this.myRevService = reviewsService;
+        this.openedModal = false;
     }
     BookReviewsComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -21,6 +24,23 @@ var BookReviewsComponent = (function () {
             .subscribe(function (reviews) {
             _this.reviews = reviews;
         });
+    };
+    BookReviewsComponent.prototype.open = function (content) {
+        var _this = this;
+        this.openedModal = true;
+        this.modalService.open(content, { backdrop: false }).result.then(function (result) {
+            _this.openedModal = false;
+        }, function (reason) {
+            _this.openedModal = false;
+        });
+    };
+    BookReviewsComponent.prototype.checkModal = function () {
+        if (this.openedModal) {
+            return "block";
+        }
+        else {
+            return "none";
+        }
     };
     __decorate([
         core_1.Input(), 
@@ -34,7 +54,7 @@ var BookReviewsComponent = (function () {
             templateUrl: 'bookReviews.component.html',
             styleUrls: ['bookReviews.component.css']
         }), 
-        __metadata('design:paramtypes', [reviews_service_1.ReviewsService])
+        __metadata('design:paramtypes', [reviews_service_1.ReviewsService, ng_bootstrap_1.NgbModal])
     ], BookReviewsComponent);
     return BookReviewsComponent;
 }());
