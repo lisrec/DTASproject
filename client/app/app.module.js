@@ -35,7 +35,8 @@ var AppModule = (function () {
                 booksGrid_component_1.BooksGridComponent,
                 bookDetails_component_1.BookDetailsComponent,
                 bookReviews_component_1.BookReviewsComponent,
-                app_pipe_1.TruncatePipe
+                app_pipe_1.TruncatePipe,
+                AboutPatrykComponent
             ],
             bootstrap: [
                 app_component_1.AppComponent

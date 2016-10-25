@@ -10,6 +10,7 @@ import { AppComponent }   		from './app.component';
 import { BooksGridComponent } 	from './components/booksGrid/booksGrid.component';
 import { BookDetailsComponent } from './components/bookDetails/bookDetails.component';
 import { BookReviewsComponent } from './components/bookReviews/bookReviews.component';
+import { AboutComponent }       from './components/about/aboutPatryk.component';
 import { RouterConf } 			from './router.config';
 
 
@@ -27,7 +28,8 @@ import { RouterConf } 			from './router.config';
   					BooksGridComponent, 
   					BookDetailsComponent, 
   					BookReviewsComponent, 
-  					TruncatePipe 
+  					TruncatePipe, 
+                    AboutPatrykComponent
   				],
 
   bootstrap: [ 
