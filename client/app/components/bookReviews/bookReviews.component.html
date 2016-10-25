@@ -3,10 +3,17 @@
 		<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
 			<span aria-hidden="true">&times;</span>
 		</button>
-		<h4 class="modal-title">Modal title</h4>
+		<h4 class="modal-title">Dodaj recenzje</h4>
 	</div>
 	<div class="modal-body">
-		<p>One fine body&hellip;</p>
+		<form>
+			<div class="form-group row">
+				<label for="example-text-input" class="col-xs-2 col-form-label">Login: </label>
+				<div class="col-xs-10">
+					<input class="form-control" type="text" value="" id="example-text-input">
+				</div>
+			</div>
+		</form>
 	</div>
 	<div class="modal-footer">
 		<button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
