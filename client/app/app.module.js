@@ -18,6 +18,11 @@ var app_component_1 = require('./app.component');
 var booksGrid_component_1 = require('./components/booksGrid/booksGrid.component');
 var bookDetails_component_1 = require('./components/bookDetails/bookDetails.component');
 var bookReviews_component_1 = require('./components/bookReviews/bookReviews.component');
+var about_component_1 = require('./components/about/about.component');
+var aboutPatryk_component_1 = require('./components/about/aboutPatryk.component');
+var aboutMichal_component_1 = require('./components/about/aboutMichal.component');
+var aboutKrzysztof_component_1 = require('./components/about/aboutKrzysztof.component');
+var aboutKamil_component_1 = require('./components/about/aboutKamil.component');
 var router_config_1 = require('./router.config');
 var AppModule = (function () {
     function AppModule() {
@@ -36,7 +41,12 @@ var AppModule = (function () {
                 bookDetails_component_1.BookDetailsComponent,
                 bookReviews_component_1.BookReviewsComponent,
                 app_pipe_1.TruncatePipe,
-                AboutPatrykComponent
+                about_component_1.AboutComponent,
+                aboutPatryk_component_1.AboutPatrykComponent,
+                aboutMichal_component_1.AboutMichalComponent,
+                aboutKrzysztof_component_1.AboutKrzysztofComponent,
+                aboutKamil_component_1.AboutKamilComponent,
+                app_pipe_1.TruncatePipe
             ],
             bootstrap: [
                 app_component_1.AppComponent

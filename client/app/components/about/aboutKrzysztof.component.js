@@ -9,18 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var AboutKrzysztofComponent = (function () {
+    function AboutKrzysztofComponent() {
     }
-    AppComponent = __decorate([
+    AboutKrzysztofComponent.prototype.ngOnInit = function () {
+    };
+    AboutKrzysztofComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'my-app',
-            templateUrl: 'template/main.html'
+            selector: 'about-krzysztof',
+            templateUrl: 'aboutKrzysztof.component.html',
+            styleUrls: ['aboutKrzysztof.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], AboutKrzysztofComponent);
+    return AboutKrzysztofComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AboutKrzysztofComponent = AboutKrzysztofComponent;
+//# sourceMappingURL=aboutKrzysztof.component.js.map

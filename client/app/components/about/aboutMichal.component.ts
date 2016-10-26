@@ -2,7 +2,7 @@ import { Component } 		from '@angular/core';
 
 @Component({
 	moduleId: module.id,
-	selector: 'about',
+	selector: 'about-michal',
 	templateUrl: 'aboutMichal.component.html',
 	styleUrls: [ 'aboutMichal.component.css' ]
 })

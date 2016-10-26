@@ -10,7 +10,12 @@ import { AppComponent }   		from './app.component';
 import { BooksGridComponent } 	from './components/booksGrid/booksGrid.component';
 import { BookDetailsComponent } from './components/bookDetails/bookDetails.component';
 import { BookReviewsComponent } from './components/bookReviews/bookReviews.component';
-import { AboutComponent }       from './components/about/aboutPatryk.component';
+import { AboutComponent }       from './components/about/about.component';
+import { AboutPatrykComponent } from './components/about/aboutPatryk.component';
+import { AboutMichalComponent } from './components/about/aboutMichal.component';
+import { AboutKrzysztofComponent } from './components/about/aboutKrzysztof.component';
+import { AboutKamilComponent } from './components/about/aboutKamil.component';
+
 import { RouterConf } 			from './router.config';
 
 
@@ -29,7 +34,12 @@ import { RouterConf } 			from './router.config';
   					BookDetailsComponent, 
   					BookReviewsComponent, 
   					TruncatePipe, 
-                    AboutPatrykComponent
+  					AboutComponent,
+            AboutPatrykComponent,  
+            AboutMichalComponent,  
+            AboutKrzysztofComponent,  
+            AboutKamilComponent,  
+  					TruncatePipe 
   				],
 
   bootstrap: [ 

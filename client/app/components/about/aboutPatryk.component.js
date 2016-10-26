@@ -15,7 +15,7 @@ var AboutPatrykComponent = (function () {
     AboutPatrykComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'about',
+            selector: 'about-patryk',
             templateUrl: 'aboutPatryk.component.html',
             styleUrls: ['aboutPatryk.component.css']
         }), 
