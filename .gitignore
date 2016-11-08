@@ -1,7 +1,7 @@
 node_modules/
 client/bower_components/
 
-client/app/*.js
-client/app/*.js.map
+client/app/**/*.js
+client/app/**/*.map
 
 npm-debug.log
