@@ -1,0 +1,94 @@
+
+
+h1,h2 {
+  color:#494f5f;
+  margin: 0;
+  padding: 10px 0 20px 0; }
+h1 {
+  font-size:36px; }
+h2 {
+  font-size:36px; }
+
+p {
+  margin: 0;
+  padding: 5px 0 5px 0; }
+
+
+
+
+div {
+  display:block;
+  margin: 0;
+  padding: 0; 
+  text-align:left; }
+
+
+
+
+
+.float_left {
+  float:left; }
+.float_right {
+  float:right; }
+
+.clear {
+  clear:both; }
+.clear_left {
+  clear:left; }
+.clear_right {
+  clear:right; }
+
+.left {
+	text-align:left; }
+.right {
+  text-align:right; }
+.center {
+  text-align:center; }
+
+.transparent {
+  background:transparent !important; }
+
+.background {
+  float:left;
+  clear:both;
+  width:100%;
+  text-align:center;
+  }
+.external {
+  position:relative;
+  clear:both;
+  margin:0 auto;
+  width:820px;
+  background:transparent; }
+.background .external { 
+  }
+
+
+#main {
+  position:relative;
+  right:50px; 
+  float:right;
+  clear:none;
+  width:385px; }
+#main #logo {
+  display:block;
+  position:relative;
+  float:left;
+  clear:none;
+  width:340px;
+  height:191px;
+  padding:0;
+  margin:0 30px 30px 0;
+  font-size:38px;
+  background:#666 0 0 no-repeat url('assets/images/about_photo/boisko.jpg'); }
+
+
+#main .hr {
+  display:block;
+  clear:both;
+  padding:0;
+  margin:10px 0;
+  border-top:1px solid #7fb725;
+  height:1px;
+  line-height:1px;
+  font-size:1px; }
