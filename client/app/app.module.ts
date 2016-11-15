@@ -15,35 +15,37 @@ import { AboutPatrykComponent } from './components/about/aboutPatryk.component';
 import { AboutMichalComponent } from './components/about/aboutMichal.component';
 import { AboutKrzysztofComponent } from './components/about/aboutKrzysztof.component';
 import { AboutKamilComponent } from './components/about/aboutKamil.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 import { RouterConf } 			from './router.config';
 
 
 
 @NgModule({
-  imports: [ 
-				BrowserModule, 
-				HttpModule, 
-				NgbModule.forRoot(), 
-				RouterModule.forRoot(RouterConf) 
+  imports: [
+				BrowserModule,
+				HttpModule,
+				NgbModule.forRoot(),
+				RouterModule.forRoot(RouterConf)
 			],
-			
+
   declarations: [
-  					AppComponent, 
-  					BooksGridComponent, 
-  					BookDetailsComponent, 
-  					BookReviewsComponent, 
-  					TruncatePipe, 
+  					AppComponent,
+  					BooksGridComponent,
+  					BookDetailsComponent,
+  					BookReviewsComponent,
+  					TruncatePipe,
   					AboutComponent,
-            AboutPatrykComponent,  
-            AboutMichalComponent,  
-            AboutKrzysztofComponent,  
-            AboutKamilComponent,  
-  					TruncatePipe 
+            AboutPatrykComponent,
+            AboutMichalComponent,
+            AboutKrzysztofComponent,
+            AboutKamilComponent,
+            ProfileComponent,
+  					TruncatePipe
   				],
 
-  bootstrap: [ 
-  				AppComponent 
+  bootstrap: [
+  				AppComponent
   			 ]
 })
 
