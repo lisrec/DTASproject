@@ -1,4 +1,10 @@
-import { Component } 		from '@angular/core';
+import { Component, 
+		 HostBinding,
+         trigger, 
+         transition, 
+         animate,
+         style, 
+         state } 			from '@angular/core';
 import { ActivatedRoute } 	from '@angular/router';
 import { BooksService } 	from '../../services/books.service';
 
@@ -12,7 +18,7 @@ import { Book }				from '../../objects/Book'
 	styleUrls: [ 'bookDetails.component.css' ],
 	providers: [ BooksService ]
 })
-export class BookDetailsComponent{
+export class BookDetailsComponent {
 	sub: any;
 	bookId: string;
 	book: Book;

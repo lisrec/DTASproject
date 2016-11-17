@@ -9,5 +9,5 @@ export class Book {
 	pages: number;
 	desc: string;
 	revs: number;
-
+	genre: string;
 }

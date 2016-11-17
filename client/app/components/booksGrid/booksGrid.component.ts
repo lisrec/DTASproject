@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { BooksService } from '../../services/books.service';
+import 'rxjs/add/operator/map';
 
 import { Book } from '../../objects/Book';
 
@@ -13,8 +15,11 @@ import { Book } from '../../objects/Book';
 export class BooksGridComponent implements OnInit {
 	books_geted: Book[];
 	books: Book[];
+	booksLoaded: boolean = false;
+	category: string = '';
 
-	constructor(private booksService: BooksService) {
+	constructor(private booksService: BooksService,
+				private activatedRoute: ActivatedRoute) {
 
 		this.booksService.getBooks()
 			.subscribe(books => {
@@ -27,11 +32,17 @@ export class BooksGridComponent implements OnInit {
 				});
 
 				this.books = countBooks;
+				this.booksLoaded = true;
 			});
-
 	}
 
-	ngOnInit(){
+	get filterCat()   { return this.category; }
 
+	ngOnInit(){
+		this.activatedRoute.params.subscribe(
+			(param: any) => {
+				if(typeof(param['category']) !== 'undefined')
+					this.category = param['category'];
+			});
 	}
 }

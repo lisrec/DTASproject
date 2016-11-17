@@ -3,12 +3,13 @@
 
         <div class="col-md-3">
             <p class="lead">Biblioteka TAS</p>
-            <div class="list-group">
-                <a class="list-group-item">Fantazy</a>
-                <a class="list-group-item">Sci-Fi</a>
-                <a class="list-group-item">Przygodowe</a>
-                <a class="list-group-item">Historyczne</a>
-                <a class="list-group-item">Popularno Naukowe</a>
+            <div class="list-group genre-menu">
+                <a href class="list-group-item" [routerLink]="['/books']">Wszystkie</a>
+                <a href class="list-group-item" [routerLink]="['/books', 'Fantazy']" routerLinkActive="active">Fantazy</a>
+                <a href class="list-group-item" [routerLink]="['/books', 'Sci-Fi']" routerLinkActive="active">Sci-Fi</a>
+                <a href class="list-group-item" [routerLink]="['/books', 'Informatyka']" routerLinkActive="active">Informatyka</a>
+                <a href class="list-group-item" [routerLink]="['/books', 'Historia']" routerLinkActive="active">Historia</a>
+                <a href class="list-group-item" [routerLink]="['/books', 'Poradniki']" routerLinkActive="active">Poradniki</a>
             </div>
         </div>
 
@@ -16,14 +17,16 @@
             <div class="row">
 
                 <!-- TEMPLATE: -->
-                <div class="col-sm-4 col-lg-4 col-md-4 float-panel anim-fadeIn-slow" *ngFor="let book of books">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/images/books_uploads/{{book?.img_link}}" alt="" class="thumb-book">
-                        <div class="card-block">
-                            <h4 class="card-title"><a href="" [routerLink]="['/book',book._id]">{{book.name}}</a></h4>
-                            <p class="card-text"> {{book.desc | limitTo: 150}} </p>
-                            <div class="text-xs-right">
-                                <p class="card-text">{{book.revs}} reviews</p>
+                <div *ngIf="booksLoaded">
+                    <div class="col-sm-4 col-lg-4 col-md-4 float-panel anim-fadeIn-slow" *ngFor="let book of (books | gridCategory: filterCat)">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/images/books_uploads/{{book?.img_link}}" alt="" class="thumb-book">
+                            <div class="card-block">
+                                <h4 class="card-title"><a href="" [routerLink]="['/book', book._id]">{{book.name}}</a></h4>
+                                <p class="card-text"> {{book.desc | limitTo: 150}} </p>
+                                <div class="text-xs-right">
+                                    <p class="card-text">{{book.revs}} reviews</p>
+                                </div>
                             </div>
                         </div>
                     </div>
