@@ -11,7 +11,7 @@ import { Book } from '../../objects/Book';
   styleUrls: [ 'bookCarousel.component.css' ],
   providers: [ BooksService ]
 })
-export class BookCarouselComponent implements OnInit {
+export class BookCarouselComponent  {
 
   @Input() genre = "";
   books: Book[];
