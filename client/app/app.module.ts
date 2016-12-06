@@ -20,6 +20,7 @@ import { NotFoundComponent } from './components/notFound/notFound.component';
 import { MainPageComponent } from './components/mainPage/mainPage.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { BookCarouselComponent } from './components/bookCarousel/bookCarousel.component';
 
 import { RouterConf } 			from './router.config';
 import { AuthGuard } from './guards/auth/auth.guard';
@@ -51,7 +52,8 @@ import { AuthGuard } from './guards/auth/auth.guard';
             NotFoundComponent,
             RegisterComponent,
             LoginComponent,
-  					TruncatePipe
+  					TruncatePipe,
+            BookCarouselComponent
   				],
 
   providers: [

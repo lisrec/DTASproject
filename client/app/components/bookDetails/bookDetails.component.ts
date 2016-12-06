@@ -1,12 +1,13 @@
-import { Component, 
+import { Component,
 		 HostBinding,
-         trigger, 
-         transition, 
+         trigger,
+         transition,
          animate,
-         style, 
+         style,
          state } 			from '@angular/core';
 import { ActivatedRoute } 	from '@angular/router';
 import { BooksService } 	from '../../services/books.service';
+import { BookCarouselComponent } from '../bookCarousel/bookCarousel.component';
 
 import { Book }				from '../../objects/Book'
 
@@ -23,7 +24,7 @@ export class BookDetailsComponent {
 	bookId: string;
 	book: Book;
 
-	constructor(private route: ActivatedRoute, 
+	constructor(private route: ActivatedRoute,
 				private booksService: BooksService){
 
 
