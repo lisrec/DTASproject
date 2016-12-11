@@ -1,0 +1,31 @@
+<div class="container anim-fadeIn-slow">
+	<div class="panel panel-default">
+
+		<div class="panel-body anim-fadeIn-slow">
+		    <div class="row">
+		    	<div class="col-md-12">
+		    	Nasz adres: bleblebele
+
+		    		<form accept-charset="UTF-8" role="form">
+	                    <fieldset>
+				    	  	<div class="form-group">
+				    		    <input [(ngModel)]="mail" class="form-control" placeholder="Mail" name="usermail" type="text">
+				    		</div>
+				    		<div class="form-group">
+				    			<input [(ngModel)]="title" class="form-control" placeholder="Tytuł" name="title" type="text">
+				    		</div>
+				    		<div class="form-group">      
+				    			<textarea [(ngModel)]="message" class="form-control" rows="5" name="message"></textarea> 
+				    		</div>
+				    		
+				    		<input (click)="sendMessage()" class="btn btn-lg btn-success btn-block" type="button" value="Wyślij">
+				    	</fieldset>
+			      	</form>
+
+		    	</div>
+			</div>
+		</div>
+	</div>
+
+	
+</div>

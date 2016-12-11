@@ -6,6 +6,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/notFound/notFound.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 import { AuthGuard } from './guards/auth/auth.guard';
 
@@ -18,6 +19,7 @@ export const RouterConf = [
       { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'contact', component: ContactComponent },
 
       { path: '**', component: NotFoundComponent }
     ]

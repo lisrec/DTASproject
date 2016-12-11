@@ -1,5 +1,6 @@
 import { NgModule }      	from '@angular/core';
 import { BrowserModule } 	from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgbModule } 		from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule }		from '@angular/router';
 import { HttpModule } 		from '@angular/http';
@@ -21,6 +22,7 @@ import { MainPageComponent } from './components/mainPage/mainPage.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { BookCarouselComponent } from './components/bookCarousel/bookCarousel.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 import { RouterConf } 			from './router.config';
 import { AuthGuard } from './guards/auth/auth.guard';
@@ -30,6 +32,7 @@ import { AuthGuard } from './guards/auth/auth.guard';
 @NgModule({
   imports: [
 				BrowserModule,
+        FormsModule,
 				HttpModule,
 				NgbModule.forRoot(),
 				RouterModule.forRoot(RouterConf)
@@ -53,7 +56,8 @@ import { AuthGuard } from './guards/auth/auth.guard';
             RegisterComponent,
             LoginComponent,
   					TruncatePipe,
-            BookCarouselComponent
+            BookCarouselComponent,
+            ContactComponent
   				],
 
   providers: [

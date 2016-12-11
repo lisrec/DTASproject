@@ -6,6 +6,7 @@ var index = require("./routes/index");
 var books = require("./routes/books");
 var profile = require("./routes/profile");
 var reviews = require("./routes/reviews");
+var messages = require("./routes/messages");
 
 var port = 8080;
 
@@ -28,6 +29,7 @@ app.use('/', index);
 app.use('/api', profile);
 app.use('/api', books);
 app.use('/api', reviews);
+app.use('/api', messages);
 
 app.use(function(req, res) {
     //res.status(404).end('error');
