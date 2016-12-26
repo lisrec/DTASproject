@@ -13,12 +13,17 @@ export class LoginComponent implements OnInit {
 	login: string = "";
 	pass: string = "";
 	err_msg: string = "";
+	processingLogin: boolean = false;
 
 	constructor(private authService: AuthService,
 				private router: Router) {}
 
 	tryLogin() {
+
+		this.processingLogin = true;
+
 		let log, pas;
+
 		log = this.login;
 		pas = md5(this.pass);
 		console.log(log, pas);
@@ -26,6 +31,8 @@ export class LoginComponent implements OnInit {
 		this.authService.login(log,pas)
 			.subscribe(res => {
 				console.log(res);
+				this.processingLogin = false;
+				
 				if(res.auth) {
 					this.err_msg = '';
 					this.router.navigate(['/profile']);

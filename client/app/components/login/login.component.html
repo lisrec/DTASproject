@@ -18,7 +18,9 @@
 				    		<div class="register">
 				    	    	<a herf [routerLink]="['/register']">Nie posiadam konta.</a>
 				    	    </div>
-				    		<input (click)="tryLogin()" class="btn btn-lg btn-success btn-block" type="button" value="Login">
+				    		<button (click)="tryLogin()" class="btn btn-lg btn-success btn-block">
+				    			Login <i *ngIf="processingLogin" class="fa fa-spinner fa-spin" aria-hidden="true"></i> 
+				    		</button>
 				    	</fieldset>
 			      	</form>
 			    </div>
