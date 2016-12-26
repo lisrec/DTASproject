@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+var conf = require('../config.js');
+
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://book_app:skibaXD@ds061076.mlab.com:61076/tas_project', ['reviews']);
+var db = mongojs(conf.connectionString, ['reviews']);
 
 
 //Get all reviews

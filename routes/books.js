@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+var conf 	= require('../config');
+
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://book_app:skibaXD@ds061076.mlab.com:61076/tas_project', ['books', 'reviews']);
+var db = mongojs(conf.connectionString, ['books', 'reviews']);
 
 
 //Get all books
@@ -102,12 +104,12 @@ router.put('/book/:id', function(req, res, next){
 	updBook.year = req.body.year;
 	updBook.desc = req.body.desc;
 
-	if((newBook.name != "") && (newBook.author != "") && (newBook.year > 0)){
-		db.books.update({_id: mongojs.ObjectId(id)}, newBook, {}, function(err, book){
+	if((updBook.name != "") && (updBook.author != "") && (updBook.year > 0)){
+		db.books.update({_id: mongojs.ObjectId(id)}, updBook, {}, function(err, book){
 			if(err){
 				res.send(err);
 			} else {
-				res.json(book);
+				res.json("ok");
 			}
 		});
 	} else {
@@ -126,7 +128,7 @@ router.delete('/book/:id', function(req, res, next){
 		if(err){
 			res.send(err);
 		} else {
-			res.json(book);
+			res.json("ok");
 		}
 	});
 });

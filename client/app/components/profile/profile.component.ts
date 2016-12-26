@@ -9,8 +9,11 @@ import { Component, OnInit } 		from '@angular/core';
 })
 export class ProfileComponent implements OnInit{
 
-	constructor() {
+	user: any = {};
 
+	constructor() {
+		var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        this.user['username'] = currentUser && currentUser.username;
     }
 
     ngOnInit() {

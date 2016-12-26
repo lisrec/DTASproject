@@ -3,7 +3,7 @@
         <div class="card">
             <img class="card-img-top" src="assets/images/books_uploads/{{book?.img_link}}" alt="" class="thumb-book">
             <div class="card-block">
-                <h4 class="card-title"><a href="" [routerLink]="['/book', book._id]">{{book.name}}</a></h4>
+                <h4 class="card-title"><a (click)="changeBook(book._id)">{{book.name}}</a></h4>
             </div>
         </div>
     </div>

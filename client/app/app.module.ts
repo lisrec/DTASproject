@@ -27,6 +27,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { RouterConf } 			from './router.config';
 import { AuthGuard } from './guards/auth/auth.guard';
 
+import { AuthService } from './services/auth.service';
+
 
 
 @NgModule({
@@ -61,7 +63,8 @@ import { AuthGuard } from './guards/auth/auth.guard';
   				],
 
   providers: [
-            AuthGuard
+            AuthGuard,
+            AuthService
           ],
 
   bootstrap: [
