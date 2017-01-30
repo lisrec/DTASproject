@@ -40,6 +40,25 @@ router.post('/login', function(req, res, next) {
 
 });
 
+router.post('/getUser', function(req, res, next) {
+
+	var token = req.body.token || req.query.token || req.headers['x-access-token'];
+
+	if (token) {
+		req.jwt.verify(token, conf.secret, function(err, decoded) {      
+			if (err) {
+				res.json({ success: false });    
+			} else {
+				console.log(decoded);
+				res.send(decoded);
+			}
+		});
+	} else {
+		res.json({ success: false });
+	}
+
+});
+
 router.post('/check', function(req, res, next) {
 
 	var token = req.body.token || req.query.token || req.headers['x-access-token'];

@@ -7,16 +7,15 @@
 	</div>
 	<div class="modal-body">
 		<form>
-			<div class="form-group row">
-				<label for="example-text-input" class="col-xs-2 col-form-label">Login: </label>
-				<div class="col-xs-10">
-					<input class="form-control" type="text" value="" id="example-text-input">
-				</div>
+			<div class="form-group">
+				<label for="reviewString">Recenzja:</label>
+				<textarea [(ngModel)]="reviewString" [ngModelOptions]="{standalone: true}" class="form-control" rows="8" id="reviewString"></textarea>
 			</div>
 		</form>
 	</div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+		<button type="button" class="btn btn-outline-warning" (click)="c('Close click')">Anuluj</button>
+		<button type="button" class="btn btn-outline-success" (click)="saveComment(); c('Saved')">Zapisz</button>
 	</div>
 </template>
 
@@ -25,7 +24,7 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="addRewview-button">
-			<button class="btn btn-sm btn-outline-success" (click)="open(makeReview)">Oceń</button>
+			<button [style.display]="showElement_checkUser()" class="btn btn-sm btn-outline-success" (click)="open(makeReview)">Oceń</button>
 		</div>
 
 		<div>

@@ -31,11 +31,13 @@ export class BookDetailsComponent {
 		this.sub = this.route.params.subscribe(params => {
 			let id = params['id'];
 			this.bookId = id;
+
+			this.booksService.getBook(this.bookId)
+	        	.subscribe(book => {
+	        		this.book = book;
+	        	});
         });
 
-        this.booksService.getBook(this.bookId)
-        	.subscribe(book => {
-        		this.book = book;
-        	});
+        
 	}
 }

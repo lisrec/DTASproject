@@ -46,6 +46,18 @@ export class AuthService {
             });
     }
 
+    getUser(curUsr) {
+        let login = curUsr.username;
+        let token = curUsr.token;
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+
+        return this.http.post(this._host+'/api/auth/getUser', JSON.stringify({ login: login, token: token }), {headers: headers})
+            .map(res => {
+                return res.json();
+            });
+    }
+
     logout(): void {
         this.token = null;
         localStorage.removeItem('currentUser');

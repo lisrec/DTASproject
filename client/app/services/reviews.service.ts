@@ -21,4 +21,9 @@ export class ReviewsService {
 		return this.http.get('/api/reviews/author/'+id)
 			.map(res => res.json());
 	}
+
+	addReview(review) {
+		return this.http.post('/api/review', review)
+			.map(res => res.json());
+	}
 }

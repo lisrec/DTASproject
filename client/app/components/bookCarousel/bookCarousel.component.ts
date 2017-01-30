@@ -37,8 +37,10 @@ export class BookCarouselComponent  {
   }
 
   changeBook(id) {
-    //console.log(id);
+    console.log(id);
+    this.router.navigate(['/']);
     this.router.navigate(['/book', id]);
+    //this.router.navigate(['/book', id], {relativeTo: this.currentActivatedRoute})
   }
 
 }

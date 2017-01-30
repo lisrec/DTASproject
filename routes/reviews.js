@@ -68,7 +68,7 @@ router.get('/reviews/author/:id', function(req, res, next){
 			"fail": "badArgs"
 		});
 	} else {
-		db.reviews.find({authorId: mongojs.ObjectId(id)}, function(err, review){
+		db.reviews.find({authorId: id}, function(err, review){
 			if(err){
 				res.send(err);
 			} else {
