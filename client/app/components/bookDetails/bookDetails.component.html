@@ -24,7 +24,14 @@
 				    		</div>
 						</div>
 						<div class="col-sm-4 col-md-4 col-lg-4">
-							[TODO: Dostępność]
+							<div *ngIf="rentLoaded">
+								<div *ngIf="canRent">
+									<button type="button" (click)="rentBook()" class="btn btn-outline-success">Wypożycz</button>
+								</div>
+								<div *ngIf="canReturn">
+									<button type="button" (click)="returnBook()" class="btn btn-outline-primary">Zwróć</button>
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -52,7 +59,7 @@
 			</div>
 		</div>
 	</div>
-
+	<hr>
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title">

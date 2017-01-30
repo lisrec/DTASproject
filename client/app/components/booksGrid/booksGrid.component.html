@@ -18,12 +18,12 @@
 
                 <!-- TEMPLATE: -->
                 <div *ngIf="booksLoaded">
-                    <div class="col-sm-4 col-lg-4 col-md-4 float-panel anim-fadeIn-slow" *ngFor="let book of (books | gridCategory: filterCat)">
+                    <div class="col-sm-6 col-md-6 col-lg-4 float-panel anim-fadeIn-slow" *ngFor="let book of (books | gridCategory: filterCat)">
                         <div class="card">
                             <img class="card-img-top" src="assets/images/books_uploads/{{book?.img_link}}" alt="" class="thumb-book">
                             <div class="card-block">
                                 <h4 class="card-title"><a href="" [routerLink]="['/book', book._id]">{{book.name}}</a></h4>
-                                <p class="card-text"> {{book.desc | limitTo: 150}} </p>
+                                <p class="card-text"> {{book.desc | limitTo: 80}} </p>
                                 <div class="text-xs-right">
                                     <p class="card-text">{{book.revs}} reviews</p>
                                 </div>

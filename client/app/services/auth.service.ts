@@ -54,6 +54,11 @@ export class AuthService {
 
         return this.http.post(this._host+'/api/auth/getUser', JSON.stringify({ login: login, token: token }), {headers: headers})
             .map(res => {
+
+                if(res.json() && (typeof(res.json().success) != 'undefined') && (res.json().success == false)) {
+                    localStorage.clear(); 
+                }
+
                 return res.json();
             });
     }

@@ -127,7 +127,9 @@ router.delete('/review/:id', function(req, res, next){
 
 	db.reviews.remove({_id: mongojs.ObjectId(id)}, 'justOne', function(err, review){
 		if(err){
-			res.send(err);
+			res.json({
+				"fail": err
+			});
 		} else {
 			res.json(review);
 		}

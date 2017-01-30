@@ -12,6 +12,7 @@ var books 		= require("./routes/books");
 var profile 	= require("./routes/profile");
 var reviews 	= require("./routes/reviews");
 var messages 	= require("./routes/messages");
+var rents 		= require("./routes/rents");
 
 var port = 8080;
 
@@ -47,6 +48,7 @@ app.use('/api', profile);
 app.use('/api', books);
 app.use('/api', reviews);
 app.use('/api', messages);
+app.use('/api', rents);
 
 app.use(function(req, res) {
     //res.status(404).end('error');

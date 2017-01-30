@@ -26,4 +26,9 @@ export class ReviewsService {
 		return this.http.post('/api/review', review)
 			.map(res => res.json());
 	}
+
+	remReview(revId) {
+		return this.http.delete('/api/review/'+revId)
+			.map(res => res.json());
+	}
 }
