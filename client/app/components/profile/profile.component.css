@@ -1,0 +1,24 @@
+.rev-row {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  min-height: 100px; }
+
+.rev-row:last-child {
+  border-bottom: none; }
+
+.image-column {
+  height: 90px;
+  margin-top: 4px;
+  background-size: cover; }
+
+.review_box {
+  padding: 5px; }
+  .review_box .heading .rev_author {
+    color: blue;
+    font-size: 12px; }
+  .review_box .heading .rev_date {
+    font-style: italic;
+    font-size: 11px; }
+  .review_box .body {
+    padding: 5px; }
+
+/*# sourceMappingURL=profile.component.css.map */

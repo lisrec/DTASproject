@@ -13,10 +13,45 @@
 		</div>
 		<div class="col-sm-12 col-md-6">
 			<h4>Wystawione opinie:</h4>
-			<div class="row anim-fadeIn-slow" *ngFor="let rev of reviews">
-		        <div class="col-sm-12 col-md-12 col-lg-12">
-		            {{rev | json}}
+			<div class="row anim-fadeIn-slow rev-row" *ngFor="let rev of reviews">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 image-column" 
+					[ngStyle]="{'background-image': 'url(assets/images/books_uploads/' + rev?.book?.img_link + ')'}"></div>
+
+		        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					<div class="review_box">
+						<div class="heading">
+							<span class="rev_author">{{rev?.author}} @ {{rev?.book?.name}}</span>
+							•
+							<span class="rev_date">{{rev?.date | date}}</span>
+						</div>
+						<div class="body">
+							<p>{{rev?.content}}</p>
+						</div>
+					</div>
+				</div>
+
+
+		    <!--<div class="col-sm-12 col-md-12 col-lg-12">
+		        	<div class="row">
+		        		<div class="col-sm-3">
+		        			<img class="card-img-top" src="assets/images/books_uploads/{{rev?.book?.img_link}}" alt="" class="thumb-book">
+		        		</div>
+		        		<div class="col-sm-4">
+		        			{{rev?.author}}
+		        			
+		        		</div>
+		        		<div class="col-sm-5">
+		        			
+		        		</div>
+		        	</div>
+		        	
+		            {{rev?.book?.name}}
+		            {{rev?.date}}
+		            {{rev?.author}}
+		            {{rev?.content}}
 		        </div>
+		        -->
+
 		    </div>
 		</div>
 	</div>

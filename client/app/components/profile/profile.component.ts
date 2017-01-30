@@ -7,7 +7,8 @@ import { BooksService }	from '../../services/books.service';
 @Component({
 	moduleId: module.id,
 	selector: 'profile',
-	providers: [ ReviewsService ],
+	providers: [ ReviewsService, 
+				 BooksService ],
 	templateUrl: 'profile.component.html',
 	styleUrls: [ 'profile.component.css' ]
 })
@@ -18,7 +19,8 @@ export class ProfileComponent implements OnInit{
 	books_borrowed: any = [];
 
 	constructor(private authService: AuthService,
-				private reviewsService: ReviewsService) {
+				private reviewsService: ReviewsService,
+				private booksService: BooksService) {
 
 		var currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
@@ -33,6 +35,13 @@ export class ProfileComponent implements OnInit{
         			.subscribe(revs => {
         				console.log(revs);
         				that.reviews = revs;
+
+        				that.reviews.forEach(function(row,index,array){
+        					that.booksService.getBook(row.bookId)
+        						.subscribe(book => {
+        							array[index].book = book;
+        						});
+        				});
         			});
 
         	});
