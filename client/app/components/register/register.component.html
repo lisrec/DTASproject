@@ -1,3 +1,27 @@
 <div class="container">
-	[TODO: rejestracja]
+	<div class="row">
+		<div class="col-md-6">
+			<h4>Formularz rejestracji</h4>
+			Załóż konto, by móc wypożyczać książki oraz je oceniać.<br><br>
+
+			<form accept-charset="UTF-8" role="form">
+		        <fieldset>
+		    	  	<div class="form-group">
+		    		    <input [(ngModel)]="login" class="form-control" placeholder="Username" name="username" type="text">
+		    		</div>
+		    		<div class="form-group">
+		    			<input [(ngModel)]="pass" class="form-control" placeholder="Password" name="password" type="password">
+		    		</div>
+		    		
+		    		<button (click)="register()" class="btn btn-success btn-block">
+		    			Rejestruj <i *ngIf="processingRegister" class="fa fa-spinner fa-spin" aria-hidden="true"></i> 
+		    		</button>
+		    	</fieldset>
+		    	<div *ngIf="error">
+			    	<p style="font-size: 12px; color: red; margin-top: 10px;">Wystąpił bląd w czasie rejestracji.</p>
+			    	<p style="font-size: 12px; color: red;">Użytkownik istnieje lub podano za krótki login.</p>
+		    	</div>
+		  	</form>
+		</div>
+	</div>
 </div>
