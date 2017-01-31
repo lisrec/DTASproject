@@ -10,6 +10,24 @@
 	<div class="row">
 		<div class="col-sm-12 col-md-6">
 			<h4>Wypożyczone książki:</h4>
+			<div *ngIf="noRentedBooks">
+				<p>Nie masz wypożyczonej żadnej książki.</p>
+			</div>
+			<div *ngIf="!noRentedBooks">
+				<div class="row anim-fadeIn-slow">
+					<div class="col-md-5 rentedBook" *ngFor="let rent of rents">
+						<div class="image"
+						[ngStyle]="{'background-image': 'url(assets/images/books_uploads/' + rent?.book?.img_link + ')'}">
+							<div class="title">
+								{{rent?.book?.name}}
+							</div>
+							<div class="button_ret">
+								<button type="button" (click)="returnBook(rent?._id)" class="btn btn-primary">Zwróć</button>
+							</div>
+						</div>
+					</div>
+			    </div>
+			</div>
 		</div>
 		<div class="col-sm-12 col-md-6">
 			<h4>Wystawione opinie:</h4>
@@ -33,29 +51,6 @@
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="padding-top: 10px;">
 					<button type="button" (click)="removeRev(rev?._id)" class="btn btn-sm btn-outline-danger">del</button>
 				</div>
-
-
-		    <!--<div class="col-sm-12 col-md-12 col-lg-12">
-		        	<div class="row">
-		        		<div class="col-sm-3">
-		        			<img class="card-img-top" src="assets/images/books_uploads/{{rev?.book?.img_link}}" alt="" class="thumb-book">
-		        		</div>
-		        		<div class="col-sm-4">
-		        			{{rev?.author}}
-		        			
-		        		</div>
-		        		<div class="col-sm-5">
-		        			
-		        		</div>
-		        	</div>
-		        	
-		            {{rev?.book?.name}}
-		            {{rev?.date}}
-		            {{rev?.author}}
-		            {{rev?.content}}
-		        </div>
-		        -->
-
 		    </div>
 		</div>
 	</div>
